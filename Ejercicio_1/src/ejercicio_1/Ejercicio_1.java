@@ -4,7 +4,6 @@
  */
 package ejercicio_1;
 
-import Persistencia.ProductoDAO;
 import Servicios.servicios_Producto;
 import java.util.Scanner;
 
@@ -39,7 +38,7 @@ public class Ejercicio_1 {
             switch (opcionMenu) {
                 case 1 ->{
                     try{
-                        System.out.println(sP.listarNombreProductos().toString());
+                        System.out.println(sP.listarNombreProductos().toString().replace(",", "\n"));
                     }catch (Exception e) {
                         e.printStackTrace();
                         System.out.println("Error del sistema por \n" + e.getMessage());
