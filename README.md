@@ -1,5 +1,5 @@
-# Dia_95
-Encuentro Día 99 de MySQL 
+# Dia_99
+Encuentro Día 99 de JDBC
 <br>
 <br>
 Para su ejecución, es necesario incluir la librería que se detalla a continuación, en ella se encuentra todos las Entidades (Objetos), Servicios y 
