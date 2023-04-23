@@ -38,13 +38,28 @@ public class Ejercicio_1 {
             switch (opcionMenu) {
                 case 1 ->{
                     try{
-                        System.out.println(sP.listarNombreProductos().toString().replace(",", "\n"));
+                        System.out.println("+-----------------------------+");
+                        System.out.println("|     Nombre de Productos     |");
+                        System.out.println("+-----------------------------+");
+                        System.out.println(sP.listarNombreProductos().toString().replace(",", "\n+-----------------------------+\n"));
+                        System.out.println("+-----------------------------+");
                     }catch (Exception e) {
                         e.printStackTrace();
                         System.out.println("Error del sistema por \n" + e.getMessage());
                     }
                     }
-                
+                case 2 ->{
+                    try{
+                        System.out.println("+-------------------------------+----------+");
+                        System.out.println("|     Nombre de Productos       |  Precio  |");
+                        System.out.println("+-------------------------------+----------+");
+                        System.out.println(sP.listarNombrePreciosProductos().toString().replace(",", "\n+-------------------------------+----------+\n"));
+                        System.out.println("+-------------------------------+----------+");
+                    }catch (Exception e) {
+                        e.printStackTrace();
+                        System.out.println("Error del sistema por \n" + e.getMessage());
+                    }
+                    }
                 default -> throw new AssertionError();
             }
             
