@@ -5,6 +5,7 @@
 package ejercicio_1;
 
 import Servicios.servicios_Producto;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -41,7 +42,8 @@ public class Ejercicio_1 {
                         System.out.println("+-----------------------------+");
                         System.out.println("|     Nombre de Productos     |");
                         System.out.println("+-----------------------------+");
-                        System.out.println(sP.listarNombreProductos().toString().replace(",", "\n+-----------------------------+\n"));
+                        System.out.println(sP.listarNombreProductos().toString().replace(",", "+-----------------------------+\n"));
+                        //System.out.println(sP.listarNombreProductos().toString());
                         System.out.println("+-----------------------------+");
                     }catch (Exception e) {
                         e.printStackTrace();
@@ -50,11 +52,25 @@ public class Ejercicio_1 {
                     }
                 case 2 ->{
                     try{
+                        
                         System.out.println("+-------------------------------+----------+");
                         System.out.println("|     Nombre de Productos       |  Precio  |");
                         System.out.println("+-------------------------------+----------+");
-                        System.out.println(sP.listarNombrePreciosProductos().toString().replace(",", "\n+-------------------------------+----------+\n"));
+                        System.out.println(sP.listarNombrePreciosProductos().toString().replace(",", "+-----------------------------+----------+\n"));
                         System.out.println("+-------------------------------+----------+");
+                    }catch (Exception e) {
+                        e.printStackTrace();
+                        System.out.println("Error del sistema por \n" + e.getMessage());
+                    }
+                    }
+                case 3 ->{
+                    try{
+                        
+                        System.out.println("+--------+-------------------------------+----------+");
+                        System.out.println("| Codigo |     Nombre de Productos       |  Precio  |");
+                        System.out.println("+--------+-------------------------------+----------+");
+                        System.out.println(sP.listarNombreRango120_202().toString().replace(",", "+--------+-----------------------------+----------+\n"));
+                        System.out.println("+--------+-------------------------------+----------+");
                     }catch (Exception e) {
                         e.printStackTrace();
                         System.out.println("Error del sistema por \n" + e.getMessage());
