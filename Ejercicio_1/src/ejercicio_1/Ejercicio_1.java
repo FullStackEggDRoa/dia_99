@@ -25,7 +25,7 @@ public class Ejercicio_1 {
         
         int opcionMenu=0;
         do{
-            System.out.println(".:: MENU TIENDA::.");
+            System.out.println(".:: MENU TIENDA ::.");
             System.out.println("1. Listar Nombre de Productos");
             System.out.println("2. Listar Nombre y Precios de Productos");
             System.out.println("3. Listar Productos con Precios entre 120 y 202");
@@ -40,7 +40,7 @@ public class Ejercicio_1 {
                 case 1 ->{
                     try{
                         System.out.println("+-----------------------------+");
-                        System.out.println("|     Nombre de Productos     |");
+                        System.out.println("|     Nombre de Producto      |");
                         System.out.println("+-----------------------------+");
                         System.out.println(sP.listarNombreProductos().toString().replace(",", "+-----------------------------+\n"));
                         //System.out.println(sP.listarNombreProductos().toString());
@@ -54,9 +54,9 @@ public class Ejercicio_1 {
                     try{
                         
                         System.out.println("+-------------------------------+----------+");
-                        System.out.println("|     Nombre de Productos       |  Precio  |");
+                        System.out.println("|     Nombre de Producto        |  Precio  |");
                         System.out.println("+-------------------------------+----------+");
-                        System.out.println(sP.listarNombrePreciosProductos().toString().replace(",", "+-----------------------------+----------+\n"));
+                        System.out.println(sP.listarNombrePreciosProductos().toString().replace(",", "+-------------------------------+----------+\n"));
                         System.out.println("+-------------------------------+----------+");
                     }catch (Exception e) {
                         e.printStackTrace();
@@ -66,11 +66,38 @@ public class Ejercicio_1 {
                 case 3 ->{
                     try{
                         
-                        System.out.println("+--------+-------------------------------+----------+");
-                        System.out.println("| Codigo |     Nombre de Productos       |  Precio  |");
-                        System.out.println("+--------+-------------------------------+----------+");
-                        System.out.println(sP.listarNombreRango120_202().toString().replace(",", "+--------+-----------------------------+----------+\n"));
-                        System.out.println("+--------+-------------------------------+----------+");
+                        System.out.println("+--------+-------------------------------+----------+--------------------+");
+                        System.out.println("| Codigo |     Nombre de Producto        |  Precio  | Codigo Frabricante |");
+                        System.out.println("+--------+-------------------------------+----------+--------------------+");
+                        System.out.println(sP.listarNombreRango120_202().toString().replace(",", "+--------+-------------------------------+----------+--------------------+\n"));
+                        System.out.println("+--------+-------------------------------+----------+--------------------+");
+                    }catch (Exception e) {
+                        e.printStackTrace();
+                        System.out.println("Error del sistema por \n" + e.getMessage());
+                    }
+                    }
+                case 4 ->{
+                    try{
+                        System.out.print("Ingrese Criterio de Busqueda: ");
+                        String criterio = leer.next();
+                        System.out.println("+--------+-------------------------------+----------+--------------------+");
+                        System.out.println("| Codigo |     Nombre de Producto        |  Precio  | Codigo Frabricante |");
+                        System.out.println("+--------+-------------------------------+----------+--------------------+");
+                        System.out.println(sP.listarBusquedaProducto(criterio).toString().replace(",", "+--------+-------------------------------+----------+--------------------+\n"));
+                        System.out.println("+--------+-------------------------------+----------+--------------------+");
+                    }catch (Exception e) {
+                        e.printStackTrace();
+                        System.out.println("Error del sistema por \n" + e.getMessage());
+                    }
+                    }
+                case 5 ->{
+                    try{
+                        
+                        System.out.println("+-------------------------------+----------+");
+                        System.out.println("| Nombre de Producto más Barato |  Precio  |");
+                        System.out.println("+-------------------------------+----------+");
+                        System.out.println(sP.listarProductoBarato().toString().replace(",", "+-------------------------------+----------+\n"));
+                        System.out.println("+-------------------------------+----------+");
                     }catch (Exception e) {
                         e.printStackTrace();
                         System.out.println("Error del sistema por \n" + e.getMessage());
