@@ -103,6 +103,16 @@ public class Ejercicio_1 {
                         System.out.println("Error del sistema por \n" + e.getMessage());
                     }
                     }
+                case 6 ->{
+                    try{
+                        
+                        sP.ingresarProducto();
+                        
+                    }catch (Exception e) {
+                        e.printStackTrace();
+                        System.out.println("Error del sistema por \n" + e.getMessage());
+                    }
+                    }
                 default -> throw new AssertionError();
             }
             
