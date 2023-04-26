@@ -4,6 +4,7 @@
  */
 package ejercicio_1;
 
+import Servicios.servicios_Fabricante;
 import Servicios.servicios_Producto;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -22,6 +23,7 @@ public class Ejercicio_1 {
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
         
         servicios_Producto sP = new servicios_Producto();
+        servicios_Fabricante sF = new servicios_Fabricante();
         
         int opcionMenu=0;
         do{
@@ -113,6 +115,29 @@ public class Ejercicio_1 {
                         System.out.println("Error del sistema por \n" + e.getMessage());
                     }
                     }
+                case 7 ->{
+                    try{
+                        sF.ingresarFabricante();
+                    }catch (Exception e) {
+                        e.printStackTrace();
+                        System.out.println("Error del sistema por \n" + e.getMessage());
+                    }
+                    }
+                
+                case 8 ->{
+                    try{
+                        System.out.println("+--------+-------------------------------+----------+--------------------+");
+                        System.out.println("| Codigo |     Nombre de Producto        |  Precio  | Codigo Frabricante |");
+                        System.out.println("+--------+-------------------------------+----------+--------------------+");
+                        System.out.println(sP.listarProductos().toString().replace(",", "+--------+-------------------------------+----------+--------------------+\n"));
+                        System.out.println("+--------+-------------------------------+----------+--------------------+");
+                        
+                    }catch (Exception e) {
+                        e.printStackTrace();
+                        System.out.println("Error del sistema por \n" + e.getMessage());
+                    }
+                    }
+                
                 default -> throw new AssertionError();
             }
             
