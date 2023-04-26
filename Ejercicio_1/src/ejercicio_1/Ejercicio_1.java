@@ -131,7 +131,7 @@ public class Ejercicio_1 {
                         System.out.println("+--------+-------------------------------+----------+--------------------+");
                         System.out.println(sP.listarProductos().toString().replace(",", "+--------+-------------------------------+----------+--------------------+\n"));
                         System.out.println("+--------+-------------------------------+----------+--------------------+");
-                        
+                        sP.editarProducto();
                     }catch (Exception e) {
                         e.printStackTrace();
                         System.out.println("Error del sistema por \n" + e.getMessage());
